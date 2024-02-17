@@ -11,12 +11,12 @@ services:
       - 3180:3180
     devices:
       # Add all video devices you want to use
-      - /dev/video0:/dev/video0
-      - /dev/video1:/dev/video1
-      - /dev/video2:/dev/video2
-      # - /dev/video3:/dev/video3
-      # - /dev/video4:/dev/video4
-      # - /dev/video5:/dev/video5
+      - /dev/video0
+      - /dev/video1
+      - /dev/video2
+      # - /dev/video3
+      # - /dev/video4
+      # - /dev/video5
     restart: always
     volumes:
       - autodarts_data:/home/autodarts/.config/autodarts

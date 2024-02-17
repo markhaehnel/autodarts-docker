@@ -1,13 +1,21 @@
 # autodarts-docker
 
-A docker image for autodarts.
+A docker images for [autodarts](https://github.com/autodarts/releases).
+
+The images are built for the amd64 and arm64 architectures.
 
 ## Usage
 
 ### Docker
 
 ```bash
-docker run -it --rm -v autodarts_data:/home/autodarts/.config/autodarts -p 3180:3180 ghcr.io/markhaehnel/autodarts
+docker run -it \
+  -v autodarts_data:/home/autodarts/.config/autodarts \
+  --device /dev/video0 \
+  --device /dev/video1 \
+  --device /dev/video2 \
+  -p 3180:3180 \
+  ghcr.io/markhaehnel/autodarts:latest
 ```
 
 ### Docke Compose
