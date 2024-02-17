@@ -5,6 +5,7 @@ on:
       autodarts_version:
         description: 'Autodarts version'
         required: true
+        type: string
 
 jobs:
   build-image:
@@ -39,5 +40,6 @@ jobs:
         with:
           context: .
           push: true
+          build-args: AUTODARTS_VERSION=${{ github.event.inputs.autodarts_version }}
           platforms: linux/amd64,linux/arm64
           tags: '"ghcr.io/markhaehnel/autodarts:${{ github.event.inputs.autodarts_version }}","ghcr.io/markhaehnel/autodarts:latest"'
