@@ -32,6 +32,12 @@ Adjust the `docker-compose.yml` to your needs and run:
 docker-compose up -d
 ```
 
+# Configuration
+
+The configuration is stored in `/home/autodarts/.config/autodarts` inside the container. You can mount a volume to persist the configuration.
+
+The examples above use the volume `autodarts_data` to persist the configuration.
+
 # License
 
 This code is licensed under the [MIT License](./LICENSE).
