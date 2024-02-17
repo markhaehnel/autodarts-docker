@@ -40,4 +40,4 @@ jobs:
           context: .
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: '"markhaehnel/autodarts:${{ github.event.inputs.autodarts_version }}","markhaehnel/autodarts:latest"'
+          tags: '"ghcr.io/markhaehnel/autodarts:${{ github.event.inputs.autodarts_version }}","ghcr.io/markhaehnel/autodarts:latest"'
